@@ -31,3 +31,19 @@ function listaAmigos(){
         lista.appendChild(li);
     }
 }
+
+function sortearAmigo(){
+    if(amigos.length == 0){
+        alert('No hay amigos. Agrega al menos 1 amigo');
+        return;
+    }
+
+
+    const aletorio = Math.floor(Math.random() * amigos.length);
+
+
+    const amigoSorteado = amigo[aletorio];
+
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `Amgio sorteado: <strong>${amigoSorteado}</strong>`;
+}
