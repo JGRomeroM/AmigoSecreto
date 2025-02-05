@@ -14,16 +14,13 @@ function agregarAmigo(){
     if(amigos.includes(amigo)){
         alert(`El amigo ${amigo} ya se encuentra en la lista`);
     }
-
     amigos.push(amigo);
-
     inputAmigo.value= "";
-
-    console.log("Array actulizado: ", amigo)
+    actualizarLista()
 }
 
-function listaAmigos(){
-    const lista = document.getElementById("listaAmigos");
+function actualizarLista(){
+    const lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
     for (let i = 0; i < amigos.length; i++){
         const li = document.createElement("li");
@@ -38,11 +35,9 @@ function sortearAmigo(){
         return;
     }
 
-
     const aletorio = Math.floor(Math.random() * amigos.length);
 
-
-    const amigoSorteado = amigo[aletorio];
+    const amigoSorteado = amigos[aletorio];
 
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `Amgio sorteado: <strong>${amigoSorteado}</strong>`;
