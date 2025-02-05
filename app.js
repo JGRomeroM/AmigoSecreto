@@ -12,7 +12,7 @@ function agregarAmigo(){
     }
 
     if(amigos.includes(amigo)){
-        alert('El amigo ${amigo}' + ' ya se encuentra en la lista')
+        alert(`El amigo ${amigo} ya se encuentra en la lista`);
     }
 
     amigos.push(amigo);
